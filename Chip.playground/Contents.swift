@@ -1,3 +1,7 @@
-import UIKit
+import Foundation
 
-var greeting = "Hello, playground"
+let storage = ChipStorage()
+let gen = Generate(storage: storage)
+let work = Work(storage: storage)
+gen.makeChip()
+work.start()
