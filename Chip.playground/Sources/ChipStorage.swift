@@ -2,7 +2,6 @@ import Foundation
 
 public class ChipStorage {
     private var storage: [Chip] = []
-    private let condition = NSCondition()
     private let queue = DispatchQueue(label: "storage", qos: .utility, attributes: .concurrent)
     public init() {}
     

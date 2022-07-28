@@ -3,8 +3,8 @@ import Foundation
 public class Generate: Thread {
     private var timer = Timer()
     private var storage: ChipStorage
-    private var time = 5.0
-    private var interval = 1.0
+    private var time = 20.0
+    private var interval = 2.0
     
     public init(storage: ChipStorage) {
         self.storage = storage
