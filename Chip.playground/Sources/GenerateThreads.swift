@@ -10,7 +10,7 @@ public class Generate: Thread {
         self.storage = storage
     }
     
-    public func makeChip() {
+    public override func main() {
         timer = Timer(timeInterval: interval, repeats: true, block: { [unowned self] _ in
             storage.addChip(Chip.make())
             time -= interval

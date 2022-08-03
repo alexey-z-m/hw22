@@ -7,15 +7,11 @@ public class Work: Thread {
         self.storage = storage
     }
     
-    public override func start() {
+    public override func main() {
         repeat {
-            print("Start soldering at \(Date.getCurrenTime())")
             let chip = storage.getChip()
             chip.sodering()
-            print("--\(chip.chipType) chip soldered \(Date.getCurrenTime()) ")
-        } while storage.count() != 0
-        
-        print("\nall chips are soldered")
+            print(" Чип \(chip.chipType) припаян \(Date.getCurrenTime()) ")
+        } while storage.isEmpty || storage.isAvailable
     }
-    
 }
