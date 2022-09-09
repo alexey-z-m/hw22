@@ -1,2 +1,2 @@
 # hw22
-chip
+multithreading chip. Thread.
